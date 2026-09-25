@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join Raw Performance | Raw Performance Training</title>
+  <meta name="description" content="Choose a Raw Performance Training membership: drop-in class, unlimited small-group, or 1-on-1 athlete coaching.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header join-header">
+    <div class="wrap">
+      <a class="back" href="index.html" aria-label="Back to home">‹</a>
+      <a class="brand" href="index.html"><img src="favicon.svg" alt="">JOIN RAW</a>
+    </div>
+  </header>
+
+  <main class="join">
+    <form id="joinForm" novalidate>
+      <div class="step">
+        <span class="eyebrow">STEP 1 OF 2</span>
+        <h1>CHOOSE YOUR PLAN</h1>
+        <div class="plan-options">
+          <label class="plan">
+            <input type="radio" name="plan" value="dropin" data-label="Drop-in class" data-price="[$PRICE]">
+            <div><strong>DROP-IN CLASS</strong><span>One small-group class</span></div>
+            <div class="p">[$PRICE]</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="unlimited" data-label="Unlimited group" data-price="[$PRICE]/mo" checked>
+            <div><strong>UNLIMITED GROUP</strong><span>Most popular · billed monthly</span></div>
+            <div class="p">[$PRICE]/mo</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="athlete" data-label="1-on-1 athlete" data-price="[$PRICE]/mo">
+            <div><strong>1-ON-1 ATHLETE</strong><span>Custom program with Sean</span></div>
+            <div class="p">[$PRICE]/mo</div>
+          </label>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="eyebrow">STEP 2 OF 2 · YOUR INFO</span>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(210) 555-0123" required>
+        </div>
+        <div class="field">
+          <label>Payment</label>
+          <!-- Card entry is intentionally not collected here. Wire this to Stripe Checkout / Payment Links (see README). -->
+          <div class="payment-note">Card details are entered on Stripe's secure checkout page after you continue.</div>
+        </div>
+        <label class="check">
+          <input type="checkbox" id="agree" name="agree" required>
+          I agree to the membership terms and liability waiver.
+        </label>
+      </div>
+
+      <div class="checkout-bar">
+        <div class="inner">
+          <div class="summary"><span id="sumLabel">Unlimited group</span><span id="sumPrice">[$PRICE]/mo</span></div>
+          <button class="btn btn-red btn-block" type="submit" id="submitBtn">START MEMBERSHIP</button>
+          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+          <p class="secure">🔒 Secure checkout · Powered by Stripe</p>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
