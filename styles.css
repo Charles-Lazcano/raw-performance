@@ -223,7 +223,8 @@ label.plan .p { font-family: var(--display); font-size: 24px; color: var(--text)
   .plans, .quotes { grid-template-columns: 1fr; }
   .program-grid { grid-template-columns: repeat(2, 1fr); }
   .runclub { grid-template-columns: 1fr; padding: 32px 24px; }
-  .hero-media { aspect-ratio: 1 / 1; }
+  .hero-media { aspect-ratio: 4 / 5; width: 100%; max-width: 440px; justify-self: center; }
+  .hero-media img { object-position: 50% 50%; }
   .coach-media { aspect-ratio: 4 / 5; max-width: 440px; justify-self: center; object-position: 70% 28%; order: -1; }
 }
 @media (max-width: 760px) {
