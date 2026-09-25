@@ -18,7 +18,7 @@ The mockup left these blank, so the site still has them:
 - **Prices**: every `[$PRICE]` in `index.html` and `join.html` (including the `data-price` attributes on the join page's plan radios)
 - **Class times**: the `[TIME]` entries in `#schedule`
 - **Address, phone and email**: in `#contact`. Swap the map placeholder for a Google Maps `<iframe>`.
-- **Photos**: the coach photo is `images/coach-sean.jpg`. The hero block is still a `.placeholder` div. Replace it with an `<img>` tag or a muted `<video>` loop.
+- **Photos**: the hero crossfades between `images/hero-1.jpg` and `images/hero-2.jpg`, and the coach photo is `images/coach-sean.jpg`. Save over any of these files to change a photo.
 - **Contact email**: `CONTACT_EMAIL` in `script.js`
 
 ## Payments
