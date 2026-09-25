@@ -185,7 +185,8 @@ p { margin: 0; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 32px; margin-top: 44px; align-items: stretch; }
 .contact-list { display: grid; gap: 10px; color: var(--muted); align-content: start; }
 .contact-list a { color: var(--text); }
-.map { min-height: 240px; }
+.contact-list address { font-style: normal; line-height: 1.5; }
+.map { width: 100%; min-height: 280px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .site-footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: 14px; }
 
 /* Join page */
