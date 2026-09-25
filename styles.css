@@ -75,7 +75,7 @@ p { margin: 0; }
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-size: 24px; letter-spacing: .06em; }
-.brand img { width: 36px; height: 36px; }
+.brand img { width: 36px; height: 36px; border-radius: 6px; }
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a:not(.btn) { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; }
 .nav a:not(.btn):hover { color: var(--text); }

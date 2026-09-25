@@ -8,7 +8,8 @@ A static site with no build step and no dependencies:
 
 - `index.html`: homepage with hero, program pillars, memberships, class schedule, coach, results, the Hustle & Stride run club, and contact
 - `join.html`: the two-step join flow (choose a plan, then enter your info)
-- `styles.css`, `script.js`, `favicon.svg`
+- `styles.css`, `script.js`
+- `images/logo.png`, `favicon.png`, `apple-touch-icon.png`: the RP logo, cropped from the original photo
 
 ## Placeholders to fill in
 
