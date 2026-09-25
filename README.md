@@ -18,7 +18,7 @@ The mockup left these blank, so the site still has them:
 - **Prices**: every `[$PRICE]` in `index.html` and `join.html` (including the `data-price` attributes on the join page's plan radios)
 - **Class times**: the `[TIME]` entries in `#schedule`
 - **Address, phone and email**: in `#contact`. Swap the map placeholder for a Google Maps `<iframe>`.
-- **Photos**: the hero crossfades between `images/hero-1.jpg` and `images/hero-2.jpg`, and the coach photo is `images/coach-sean.jpg`. Save over any of these files to change a photo.
+- **Photos**: the hero crossfades between `images/hero-1.jpg` and `images/hero-2.jpg`, the coach photo is `images/coach-sean.jpg`, and the run club video is `images/run-club.mp4` (with `images/run-club-poster.jpg` as its still frame). Save over any of these files to change them.
 - **Contact email**: `CONTACT_EMAIL` in `script.js`
 
 ## Payments

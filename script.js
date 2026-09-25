@@ -23,6 +23,13 @@ if (menuBtn && nav) {
   );
 }
 
+// Don't autoplay the run club video for visitors who prefer reduced motion
+const runVideo = document.querySelector(".runclub-video");
+if (runVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  runVideo.removeAttribute("autoplay");
+  runVideo.pause();
+}
+
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 

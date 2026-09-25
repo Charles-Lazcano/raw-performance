@@ -163,7 +163,7 @@ p { margin: 0; }
 /* Run club */
 .runclub {
   background: var(--red); color: #fff; border-radius: 14px;
-  padding: 44px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
+  padding: 44px; display: grid; grid-template-columns: 1fr minmax(0, 340px); gap: 40px; align-items: center;
   position: relative; overflow: hidden;
 }
 .runclub .eyebrow { color: #fff; opacity: .85; }
@@ -171,6 +171,14 @@ p { margin: 0; }
 .runclub p { max-width: 480px; }
 .runclub .btn { background: var(--bg); color: #fff; }
 .runclub .btn:hover { background: #000; }
+.runclub p + .btn { margin-top: 24px; }
+/* Bright red border, separated from the red card by a dark ring so it stays visible */
+.runclub-video {
+  display: block; width: 100%; max-width: 340px; height: auto; aspect-ratio: 720 / 1112;
+  object-fit: cover; background: var(--bg);
+  border: 4px solid #ff2b2b; border-radius: 12px;
+  box-shadow: 0 0 0 4px var(--bg), 0 12px 32px rgba(0, 0, 0, .35);
+}
 
 /* Footer / contact */
 .cta-final h2 { font-size: clamp(72px, 13vw, 150px); margin-bottom: 28px; }
@@ -222,7 +230,8 @@ label.plan .p { font-family: var(--display); font-size: 24px; color: var(--text)
   .hero-grid, .coach-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
   .plans, .quotes { grid-template-columns: 1fr; }
   .program-grid { grid-template-columns: repeat(2, 1fr); }
-  .runclub { grid-template-columns: 1fr; padding: 32px 24px; }
+  .runclub { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
+  .runclub-video { justify-self: center; max-width: 360px; }
   .hero-media { aspect-ratio: 4 / 5; width: 100%; max-width: 440px; justify-self: center; }
   .hero-media img { object-position: 50% 50%; }
   .coach-media { aspect-ratio: 2 / 3; max-width: 440px; justify-self: center; object-position: 70% 28%; order: -1; }
