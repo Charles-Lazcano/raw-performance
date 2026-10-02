@@ -19,13 +19,13 @@
       <a class="brand" href="#top"><img src="images/logo.png" alt="" width="36" height="36">RAW PERFORMANCE</a>
       <nav class="nav" id="nav" aria-label="Main">
         <a href="#program">Program</a>
-        <a href="#memberships">Memberships</a>
+        <a href="#get-started">Start Training</a>
         <a href="#schedule">Schedule</a>
         <a href="#coach">Coach</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <a class="btn btn-red btn-sm" href="join.html">JOIN</a>
+        <a class="btn btn-red btn-sm" href="#get-started">GET STARTED</a>
         <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
       </div>
     </div>
@@ -39,8 +39,8 @@
           <h1>TRAIN WITH INTENT.<br><span class="accent">PERFORM RAW.</span></h1>
           <p class="lede">Advanced small-group classes and 1-on-1 coaching for athletes — and anyone ready to get better every day.</p>
           <div class="hero-ctas">
-            <a class="btn btn-red" href="join.html?plan=unlimited">START YOUR MEMBERSHIP →</a>
-            <a class="btn btn-ghost" href="join.html?plan=dropin">BOOK A FREE CLASS</a>
+            <a class="btn btn-red" href="#get-started">GET STARTED →</a>
+            <a class="btn btn-ghost" href="#intake" data-option="dropin">BOOK A FREE CLASS</a>
           </div>
           <div class="stats">
             <div class="stat"><strong>4.8K</strong><span>Instagram community</span></div>
@@ -72,34 +72,118 @@
       </div>
     </section>
 
-    <section class="section" id="memberships">
+    <section class="section" id="get-started">
       <div class="wrap">
-        <span class="eyebrow">MEMBERSHIPS</span>
-        <h2>PICK YOUR LEVEL. SIGN UP IN 2 MINUTES.</h2>
+        <span class="eyebrow">START YOUR TRAINING</span>
+        <h2>IT STARTS WITH A CONVERSATION.</h2>
+        <p class="lede">Every member at RAW starts with a conversation. Tell Sean a little about yourself and your goals, and he’ll reach out to set up your first session and find the right plan for you.</p>
+
+        <span class="eyebrow subhead">HOW IT WORKS</span>
+        <div class="steps">
+          <div class="pillar"><b>01</b><h3>TELL US ABOUT YOURSELF</h3><p>Fill out the short form below: your goals, your schedule, anything Sean should know.</p></div>
+          <div class="pillar"><b>02</b><h3>SEAN REACHES OUT PERSONALLY</h3><p>He’ll get in touch within 24–48 hours to talk through your goals and set up your first session.</p></div>
+          <div class="pillar"><b>03</b><h3>START TRAINING</h3><p>Show up, meet the crew, and get to work on a plan built around you.</p></div>
+        </div>
+
+        <span class="eyebrow subhead">TRAINING OPTIONS</span>
         <div class="plans">
           <div class="plan-card">
             <h3>DROP-IN</h3>
-            <div class="price">[$PRICE]<small> /class</small></div>
-            <p>Try a small-group class before you commit.</p>
-            <a class="btn btn-outline" href="join.html?plan=dropin">BUY A CLASS</a>
+            <p>Try a small-group class and see how it feels.</p>
+            <a class="btn btn-outline" href="#intake" data-option="dropin">GET STARTED</a>
           </div>
           <div class="plan-card featured">
             <span class="badge">MOST POPULAR</span>
             <h3>UNLIMITED GROUP</h3>
-            <div class="price">[$PRICE]<small> /mo</small></div>
             <ul>
               <li>Unlimited small-group classes</li>
               <li>Monthly progress check-in</li>
-              <li>Auto-billed monthly — manage online</li>
             </ul>
-            <a class="btn btn-red" href="join.html?plan=unlimited">START MEMBERSHIP</a>
+            <a class="btn btn-red" href="#intake" data-option="unlimited">GET STARTED</a>
           </div>
           <div class="plan-card">
             <h3>1-ON-1 ATHLETE</h3>
-            <div class="price">[$PRICE]<small> /mo</small></div>
             <p>Custom program built around your sport and season, coached by Sean.</p>
-            <a class="btn btn-outline" href="join.html?plan=athlete">APPLY FOR COACHING</a>
+            <a class="btn btn-outline" href="#intake" data-option="athlete">GET STARTED</a>
           </div>
+        </div>
+        <p class="plans-note">Plans are built around your goals and schedule — Sean will walk you through options.</p>
+
+        <form class="intake" id="intake" novalidate>
+          <h3>TELL SEAN ABOUT YOURSELF</h3>
+          <!-- Spam honeypot: hidden from people; bots fill it in and Formspree discards the submission -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(210) 555-0123" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required>
+            </div>
+          </div>
+          <fieldset class="field">
+            <legend>Best way to reach you</legend>
+            <div class="choices choices-inline">
+              <label class="check"><input type="radio" name="contact_method" value="Text" checked> Text</label>
+              <label class="check"><input type="radio" name="contact_method" value="Call"> Call</label>
+              <label class="check"><input type="radio" name="contact_method" value="Email"> Email</label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>What are your goals? <span class="hint">Pick any that fit</span></legend>
+            <div class="choices">
+              <label class="check"><input type="checkbox" name="goals" value="Build strength"> Build strength</label>
+              <label class="check"><input type="checkbox" name="goals" value="Lose weight"> Lose weight</label>
+              <label class="check"><input type="checkbox" name="goals" value="Athletic performance"> Athletic performance</label>
+              <label class="check"><input type="checkbox" name="goals" value="HYROX/competition prep"> HYROX/competition prep</label>
+              <label class="check"><input type="checkbox" name="goals" value="General fitness"> General fitness</label>
+              <label class="check"><input type="checkbox" name="goals" value="Other"> Other</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="option">Training option you’re interested in</label>
+            <select id="option" name="training_option">
+              <option value="Not sure yet — help me choose" selected>Not sure yet — help me choose</option>
+              <option value="Drop-in" data-option="dropin">Drop-in</option>
+              <option value="Unlimited group" data-option="unlimited">Unlimited group</option>
+              <option value="1-on-1 athlete" data-option="athlete">1-on-1 athlete</option>
+            </select>
+          </div>
+          <fieldset class="field">
+            <legend>Where are you starting from? <span class="hint">Every level is welcome</span></legend>
+            <div class="choices">
+              <label class="check"><input type="radio" name="experience" value="Just starting out"> Just starting out</label>
+              <label class="check"><input type="radio" name="experience" value="Some experience"> Some experience</label>
+              <label class="check"><input type="radio" name="experience" value="Very experienced"> Very experienced</label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>When can you usually train?</legend>
+            <div class="choices">
+              <label class="check"><input type="checkbox" name="availability" value="Early morning"> Early morning</label>
+              <label class="check"><input type="checkbox" name="availability" value="Mid-day"> Mid-day</label>
+              <label class="check"><input type="checkbox" name="availability" value="Evening"> Evening</label>
+              <label class="check"><input type="checkbox" name="availability" value="Weekends"> Weekends</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="notes">Anything Sean should know? <span class="hint">Optional</span></label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Injuries, limitations, questions…"></textarea>
+          </div>
+
+          <button class="btn btn-red btn-block" type="submit" id="intakeSubmit">SEND TO SEAN</button>
+          <p class="form-msg" id="intakeMsg" role="status" aria-live="polite"></p>
+        </form>
+        <div class="intake intake-done" id="intakeDone" tabindex="-1" hidden>
+          <h3 id="intakeThanks"></h3>
+          <p>Keep an eye on your phone. In the meantime, come say hi at the Wednesday run club.</p>
         </div>
       </div>
     </section>
@@ -109,11 +193,11 @@
         <span class="eyebrow">THIS WEEK</span>
         <h2>CLASS SCHEDULE</h2>
         <div class="schedule">
-          <div class="class-row"><span class="day">MON · [TIME]</span><span class="name">Strength + Conditioning</span><a class="btn btn-outline btn-sm" href="join.html?plan=dropin">BOOK</a></div>
-          <div class="class-row"><span class="day">TUE · [TIME]</span><span class="name">Speed + Agility</span><a class="btn btn-outline btn-sm" href="join.html?plan=dropin">BOOK</a></div>
+          <div class="class-row"><span class="day">MON · [TIME]</span><span class="name">Strength + Conditioning</span><a class="btn btn-outline btn-sm" href="#intake" data-option="dropin">GET STARTED</a></div>
+          <div class="class-row"><span class="day">TUE · [TIME]</span><span class="name">Speed + Agility</span><a class="btn btn-outline btn-sm" href="#intake" data-option="dropin">GET STARTED</a></div>
           <div class="class-row highlight"><span class="day">WED · 6:45 PM</span><span class="name">Hustle &amp; Stride Run Club</span><a class="btn btn-red btn-sm" href="#runclub">RSVP FREE</a></div>
-          <div class="class-row"><span class="day">THU · [TIME]</span><span class="name">Endurance / HYROX prep</span><a class="btn btn-outline btn-sm" href="join.html?plan=dropin">BOOK</a></div>
-          <div class="class-row"><span class="day">SAT · [TIME]</span><span class="name">Hybrid Workout</span><a class="btn btn-outline btn-sm" href="join.html?plan=dropin">BOOK</a></div>
+          <div class="class-row"><span class="day">THU · [TIME]</span><span class="name">Endurance / HYROX prep</span><a class="btn btn-outline btn-sm" href="#intake" data-option="dropin">GET STARTED</a></div>
+          <div class="class-row"><span class="day">SAT · [TIME]</span><span class="name">Hybrid Workout</span><a class="btn btn-outline btn-sm" href="#intake" data-option="dropin">GET STARTED</a></div>
         </div>
       </div>
     </section>
@@ -167,7 +251,7 @@
     <section class="section cta-final" id="contact">
       <div class="wrap">
         <h2>PUT THE<br><span class="accent">WORK IN.</span></h2>
-        <a class="btn btn-red" href="join.html?plan=unlimited">JOIN RAW PERFORMANCE</a>
+        <a class="btn btn-red" href="#get-started">GET STARTED</a>
         <div class="contact-grid">
           <div class="contact-list">
             <address>

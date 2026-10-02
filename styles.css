@@ -62,7 +62,7 @@ p { margin: 0; }
 .btn-outline:hover { border-color: var(--text); }
 .btn-sm { font-size: 17px; padding: 8px 16px; min-height: 40px; }
 .btn-block { width: 100%; }
-.btn:focus-visible, a:focus-visible, input:focus-visible, label.plan:focus-within {
+.btn:focus-visible, a:focus-visible, input:focus-visible {
   outline: 2px solid var(--red); outline-offset: 3px;
 }
 
@@ -80,6 +80,7 @@ p { margin: 0; }
 .nav a:not(.btn) { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; }
 .nav a:not(.btn):hover { color: var(--text); }
 .header-actions { display: flex; align-items: center; gap: 10px; }
+.brand, .header-actions .btn { white-space: nowrap; }
 .menu-btn {
   display: none; width: 44px; height: 40px; border-radius: 8px;
   background: var(--surface-2); border: 1px solid var(--line); color: var(--text); cursor: pointer;
@@ -125,14 +126,12 @@ p { margin: 0; }
 .pillar b { display: block; font-family: var(--display); font-weight: 400; color: var(--red); font-size: 40px; line-height: 1; margin-bottom: 14px; }
 .pillar h3 { font-size: 28px; }
 
-/* Memberships */
+/* Start your training */
 .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; align-items: stretch; }
 .plan-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; gap: 14px; }
 .plan-card.featured { border-color: var(--red); background: linear-gradient(180deg, var(--red-tint), var(--surface) 70%); }
 .plan-card .badge { align-self: flex-start; background: var(--red); color: #fff; font-family: var(--display); letter-spacing: .1em; font-size: 14px; padding: 4px 10px; border-radius: 4px; }
 .plan-card h3 { font-size: 32px; }
-.price { font-family: var(--display); font-size: 36px; }
-.price small { font-family: var(--body); font-size: 15px; color: var(--muted); }
 .plan-card p, .plan-card li { color: var(--muted); }
 .plan-card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .plan-card li::before { content: "✓"; color: var(--red); font-weight: 700; margin-right: 10px; }
@@ -189,47 +188,51 @@ p { margin: 0; }
 .map { width: 100%; min-height: 280px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .site-footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: 14px; }
 
-/* Join page */
-.join-header .wrap { justify-content: flex-start; }
-.back { display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; text-decoration: none; font-size: 22px; border-radius: 8px; }
-.back:hover { background: var(--surface-2); }
-.join { max-width: 560px; margin: 0 auto; padding: 36px 20px 180px; }
-.join h1 { font-size: clamp(48px, 10vw, 64px); margin-bottom: 22px; }
-.step { margin-bottom: 36px; }
-.plan-options { display: grid; gap: 12px; }
-label.plan {
-  display: flex; justify-content: space-between; align-items: center; gap: 16px;
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 18px 20px; cursor: pointer; transition: border-color .15s, background .15s;
+/* Get Started intake form */
+.subhead { margin-top: 56px; margin-bottom: 0; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+.steps .pillar h3 { margin-bottom: 10px; }
+.steps .pillar p { color: var(--muted); font-size: 16px; }
+.subhead + .plans { margin-top: 20px; }
+.plans-note { color: var(--muted); margin-top: 18px; }
+.intake {
+  max-width: 760px; margin: 48px auto 0; scroll-margin-top: 84px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px;
 }
-label.plan input { position: absolute; opacity: 0; pointer-events: none; }
-label.plan:has(input:checked) { border-color: var(--red); background: var(--red-tint); }
-label.plan strong { display: block; font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1.1; }
-label.plan span { color: var(--muted); font-size: 15px; }
-label.plan .p { font-family: var(--display); font-size: 24px; color: var(--text); white-space: nowrap; }
-.field { display: grid; gap: 6px; margin-bottom: 16px; }
-.field label { font-weight: 600; font-size: 15px; }
-.field input {
-  font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--line);
+.intake h3 { font-size: clamp(32px, 5vw, 44px); margin-bottom: 24px; }
+.intake-done:focus { outline: none; }
+.intake-done h3 { line-height: 1.05; }
+.intake-done p { color: var(--muted); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.field { display: grid; gap: 6px; margin: 0 0 20px; }
+fieldset.field { border: 0; padding: 0; min-width: 0; }
+.field label, .field legend { font-weight: 600; font-size: 15px; padding: 0; }
+.field legend { margin-bottom: 6px; }
+.hint { font-weight: 400; color: var(--muted); font-size: 14px; margin-left: 6px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+.field input, .field select, .field textarea {
+  font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line);
   border-radius: 8px; padding: 14px 16px; min-height: 52px; width: 100%;
 }
-.field input::placeholder { color: #6b6964; }
-.field input:focus { outline: none; border-color: var(--red); }
-.payment-note { background: var(--surface); border: 1px dashed var(--line); border-radius: 8px; padding: 14px 16px; color: var(--muted); font-size: 15px; }
-.check { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); font-size: 15px; margin-top: 8px; cursor: pointer; }
-.check input { width: 20px; height: 20px; accent-color: var(--red); margin-top: 2px; flex: none; }
-.checkout-bar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--bg); border-top: 1px solid var(--line); padding: 16px 20px 18px; z-index: 10; }
-.checkout-bar .inner { max-width: 520px; margin: 0 auto; }
-.summary { display: flex; justify-content: space-between; margin-bottom: 12px; }
-.summary span:first-child { text-transform: uppercase; color: var(--muted); }
-.summary span:last-child { font-family: var(--display); font-size: 22px; }
-.secure { text-align: center; color: var(--muted); font-size: 13px; margin-top: 10px; }
-.form-msg { margin-top: 10px; color: var(--muted); font-size: 14px; text-align: center; min-height: 1em; }
+.field select { color-scheme: dark; cursor: pointer; }
+.field textarea { resize: vertical; min-height: 110px; }
+.field input::placeholder, .field textarea::placeholder { color: #6b6964; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--red); }
+.field [aria-invalid="true"] { border-color: var(--red); }
+.choices { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px 20px; }
+.choices-inline { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.check { display: flex; gap: 12px; align-items: center; color: var(--muted); font-size: 16px; cursor: pointer; min-height: 32px; }
+.check:has(input:checked) { color: var(--text); }
+.check input { width: 20px; height: 20px; accent-color: var(--red); margin: 0; flex: none; }
+.intake .btn { margin-top: 8px; }
+.intake .btn:disabled { opacity: .7; cursor: progress; }
+.form-msg { margin-top: 12px; color: var(--muted); font-size: 15px; text-align: center; min-height: 1em; }
+.form-msg.error { color: #ff6b74; }
 
 /* Responsive */
 @media (max-width: 900px) {
   .hero-grid, .coach-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-  .plans, .quotes { grid-template-columns: 1fr; }
+  .plans, .quotes, .steps { grid-template-columns: 1fr; }
   .program-grid { grid-template-columns: repeat(2, 1fr); }
   .runclub { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
   .runclub-video { justify-self: center; max-width: 260px; }
@@ -254,6 +257,16 @@ label.plan .p { font-family: var(--display); font-size: 24px; color: var(--text)
   .class-row .name { grid-column: 1; grid-row: 2; }
   .class-row .btn { grid-column: 2; grid-row: 1 / span 2; }
   .stat strong { font-size: 32px; }
+  .intake { padding: 24px 18px; }
+  .field-row { grid-template-columns: 1fr; }
+}
+/* Small phones: tighten the header so the brand and GET STARTED stay on one line */
+@media (max-width: 400px) {
+  .site-header .wrap { gap: 10px; }
+  .brand { font-size: 20px; gap: 8px; }
+  .brand img { width: 30px; height: 30px; }
+  .header-actions { gap: 8px; }
+  .header-actions .btn-sm { font-size: 15px; padding: 8px 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
