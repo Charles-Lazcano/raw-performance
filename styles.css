@@ -58,8 +58,8 @@ p { margin: 0; }
 .btn-red:hover { background: var(--red-deep); }
 .btn-ghost { border-color: var(--text); color: var(--text); background: transparent; }
 .btn-ghost:hover { background: var(--text); color: var(--bg); }
-.btn-outline { border-color: var(--line); color: var(--text); background: transparent; }
-.btn-outline:hover { border-color: var(--text); }
+.btn-outline { border-color: var(--red); color: #fff; background: var(--red-tint); }
+.btn-outline:hover { background: var(--red); }
 .btn-sm { font-size: 17px; padding: 8px 16px; min-height: 40px; }
 .btn-block { width: 100%; }
 .btn:focus-visible, a:focus-visible, input:focus-visible {
