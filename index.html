@@ -111,6 +111,7 @@
 
         <form class="intake" id="intake" novalidate>
           <h3>TELL SEAN ABOUT YOURSELF</h3>
+          <p class="intake-sub">Takes about a minute. Tap everything that fits.</p>
           <!-- Spam honeypot: hidden from people; bots tick it and Web3Forms discards the submission -->
           <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
@@ -130,21 +131,21 @@
           </div>
           <fieldset class="field">
             <legend>Best way to reach you</legend>
-            <div class="choices choices-inline">
-              <label class="check"><input type="radio" name="contact_method" value="Text" checked> Text</label>
-              <label class="check"><input type="radio" name="contact_method" value="Call"> Call</label>
-              <label class="check"><input type="radio" name="contact_method" value="Email"> Email</label>
+            <div class="choices segmented">
+              <label class="chip"><input type="radio" name="contact_method" value="Text" checked> Text</label>
+              <label class="chip"><input type="radio" name="contact_method" value="Call"> Call</label>
+              <label class="chip"><input type="radio" name="contact_method" value="Email"> Email</label>
             </div>
           </fieldset>
           <fieldset class="field">
             <legend>What are your goals? <span class="hint">Pick any that fit</span></legend>
             <div class="choices">
-              <label class="check"><input type="checkbox" name="goals" value="Build strength"> Build strength</label>
-              <label class="check"><input type="checkbox" name="goals" value="Lose weight"> Lose weight</label>
-              <label class="check"><input type="checkbox" name="goals" value="Athletic performance"> Athletic performance</label>
-              <label class="check"><input type="checkbox" name="goals" value="HYROX/competition prep"> HYROX/competition prep</label>
-              <label class="check"><input type="checkbox" name="goals" value="General fitness"> General fitness</label>
-              <label class="check"><input type="checkbox" name="goals" value="Other"> Other</label>
+              <label class="chip"><input type="checkbox" name="goals" value="Build strength"> Build strength</label>
+              <label class="chip"><input type="checkbox" name="goals" value="Lose weight"> Lose weight</label>
+              <label class="chip"><input type="checkbox" name="goals" value="Athletic performance"> Athletic performance</label>
+              <label class="chip"><input type="checkbox" name="goals" value="HYROX/competition prep"> HYROX/competition prep</label>
+              <label class="chip"><input type="checkbox" name="goals" value="General fitness"> General fitness</label>
+              <label class="chip"><input type="checkbox" name="goals" value="Other"> Other</label>
             </div>
           </fieldset>
           <div class="field">
@@ -159,18 +160,16 @@
           <fieldset class="field">
             <legend>Where are you starting from? <span class="hint">Every level is welcome</span></legend>
             <div class="choices">
-              <label class="check"><input type="radio" name="experience" value="Just starting out"> Just starting out</label>
-              <label class="check"><input type="radio" name="experience" value="Some experience"> Some experience</label>
-              <label class="check"><input type="radio" name="experience" value="Very experienced"> Very experienced</label>
+              <label class="chip"><input type="radio" name="experience" value="Just starting out"> Just starting out</label>
+              <label class="chip"><input type="radio" name="experience" value="Some experience"> Some experience</label>
+              <label class="chip"><input type="radio" name="experience" value="Very experienced"> Very experienced</label>
             </div>
           </fieldset>
           <fieldset class="field">
             <legend>When can you usually train?</legend>
             <div class="choices">
-              <label class="check"><input type="checkbox" name="availability" value="Early morning"> Early morning</label>
-              <label class="check"><input type="checkbox" name="availability" value="Mid-day"> Mid-day</label>
-              <label class="check"><input type="checkbox" name="availability" value="Evening"> Evening</label>
-              <label class="check"><input type="checkbox" name="availability" value="Weekends"> Weekends</label>
+              <label class="chip"><input type="checkbox" name="availability" value="Early morning"> Early morning</label>
+              <label class="chip"><input type="checkbox" name="availability" value="Evening"> Evening</label>
             </div>
           </fieldset>
           <div class="field">
