@@ -18,20 +18,21 @@ The mockup left these blank, so the site still has them:
 - **Class times**: the `[TIME]` entries in `#schedule`
 - **Phone and email**: in `#contact`. The address (10665 Shaenfield Rd, Unit 111) and Google Map are already filled in.
 - **Photos**: the hero crossfades between `images/hero-1.jpg` and `images/hero-2.jpg`, the coach photo is `images/coach-sean.jpg`, and the run club video is `images/run-club.mp4` (with `images/run-club-poster.jpg` as its still frame). Save over any of these files to change them.
-- **Form ID**: `FORMSPREE_ENDPOINT` in `script.js` (see below)
+- **Form access key**: `WEB3FORMS_ACCESS_KEY` in `script.js` (see below)
 
 ## Get Started form
 
 There is no online checkout. Every new member fills out the Get Started form, and Sean follows up personally to set up their first session and pick a plan. The site shows no prices on purpose.
 
-The form posts to [Formspree](https://formspree.io), which emails each submission to Sean. To connect it:
+The form posts to [Web3Forms](https://web3forms.com), which emails each submission to Sean. To connect it:
 
-1. Sign up at formspree.io with the email address that should receive the submissions (Sean's), and confirm that address.
-2. Create a new form (for example "RAW Get Started"). Formspree gives it an endpoint like `https://formspree.io/f/xyzabcde`.
-3. In `script.js`, replace `YOUR_FORM_ID` in `FORMSPREE_ENDPOINT` with that ID, then commit and push.
-4. Submit a test entry on the live site. The first submission may ask you to confirm the form in the Formspree dashboard.
+1. Go to web3forms.com, enter Sean's email address, and click "Create Access Key". The key arrives in that inbox.
+2. In `script.js`, replace `YOUR_ACCESS_KEY` in `WEB3FORMS_ACCESS_KEY` with that key, then commit and push.
+3. Submit a test entry on the live site and check that it lands in Sean's inbox (and not spam).
 
-Spam protection comes from the hidden `_gotcha` honeypot field. Each "Get Started" button with a `data-option` attribute pre-selects that training option in the form.
+The access key is meant to be public: it can only send email to the address it was created for. Replying to a submission email goes straight to the person who filled out the form.
+
+Spam protection comes from the hidden `botcheck` honeypot field. Each "Get Started" button with a `data-option` attribute pre-selects that training option in the form.
 
 ## Deploying
 

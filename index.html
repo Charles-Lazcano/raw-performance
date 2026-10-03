@@ -111,8 +111,8 @@
 
         <form class="intake" id="intake" novalidate>
           <h3>TELL SEAN ABOUT YOURSELF</h3>
-          <!-- Spam honeypot: hidden from people; bots fill it in and Formspree discards the submission -->
-          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <!-- Spam honeypot: hidden from people; bots tick it and Web3Forms discards the submission -->
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="field">
             <label for="name">Full name</label>

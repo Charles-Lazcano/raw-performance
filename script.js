@@ -1,7 +1,8 @@
-// Formspree endpoint for the "Get Started" form.
-// PASTE THE REAL FORM ID HERE: replace YOUR_FORM_ID with the ID from your Formspree form
-// (Formspree dashboard → your form → Integration, e.g. https://formspree.io/f/xyzabcde).
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+// Web3Forms sends each "Get Started" submission to Sean's email.
+// PASTE THE REAL ACCESS KEY HERE: replace YOUR_ACCESS_KEY with the key Web3Forms emails you
+// (create one at https://web3forms.com with Sean's email). It is safe to be public: it can only send to that inbox.
+const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY";
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 // Mobile nav
 const menuBtn = document.getElementById("menuBtn");
@@ -75,22 +76,24 @@ if (intake) {
 
     // Join multi-select checkboxes into one line each so the email to Sean reads cleanly
     const data = new FormData(intake);
-    const payload = {};
+    const payload = { access_key: WEB3FORMS_ACCESS_KEY, from_name: "Raw Performance website" };
     for (const key of new Set(data.keys())) payload[key] = data.getAll(key).join(", ");
+    if (!data.has("botcheck")) payload.botcheck = false;
     payload.goals = payload.goals || "(none selected)";
     payload.availability = payload.availability || "(none selected)";
     payload.experience = payload.experience || "(not given)";
-    payload._subject = `New RAW intake: ${payload.name.trim()}`;
+    payload.subject = `New RAW intake: ${payload.name.trim()}`;
 
     submitBtn.disabled = true;
     submitBtn.textContent = "SENDING…";
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload)
       });
-      if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || json.success === false) throw new Error(`Web3Forms responded ${res.status}: ${json.message || ""}`);
       const firstName = payload.name.trim().split(/\s+/)[0];
       document.getElementById("intakeThanks").textContent =
         `Thanks, ${firstName}! Sean will reach out within 24–48 hours to set up your first session.`;
