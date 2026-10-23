@@ -33,21 +33,9 @@ if (year) year.textContent = new Date().getFullYear();
 // "Get Started" intake form
 const intake = document.getElementById("intake");
 if (intake) {
-  const optionSelect = document.getElementById("option");
   const submitBtn = document.getElementById("intakeSubmit");
   const msg = document.getElementById("intakeMsg");
   const done = document.getElementById("intakeDone");
-
-  // Pre-select a training option from a "Get Started" button (data-option) or an old join.html?plan= link
-  const selectOption = (key) => {
-    const opt = optionSelect.querySelector(`option[data-option="${key}"]`);
-    if (opt) optionSelect.value = opt.value;
-  };
-  document.querySelectorAll("a[data-option]").forEach((a) =>
-    a.addEventListener("click", () => selectOption(a.dataset.option))
-  );
-  const requested = new URLSearchParams(location.search).get("option");
-  if (requested) selectOption(requested);
 
   const checks = {
     name: (el) => el.value.trim().length > 1 || "Please enter your name.",

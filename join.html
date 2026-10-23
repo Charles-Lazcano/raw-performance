@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Get Started | Raw Performance Training</title>
   <!-- The old online sign-up page. New members now start with the "Get Started" form on the
-       homepage, so this page just forwards old links there (keeping ?plan= so the option is pre-selected). -->
+       homepage, so this page just forwards old links there. -->
   <meta http-equiv="refresh" content="0; url=index.html#get-started">
   <link rel="canonical" href="index.html#get-started">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#0b0b0c">
   <link rel="icon" href="favicon.png" type="image/png">
   <script>
-    const plan = new URLSearchParams(location.search).get("plan");
-    location.replace("index.html" + (plan ? "?option=" + encodeURIComponent(plan) + "#intake" : "#get-started"));
+    location.replace("index.html#get-started");
   </script>
 </head>
 <body style="background:#0b0b0c;color:#f2efe9;font-family:system-ui,sans-serif">

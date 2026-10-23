@@ -30,7 +30,7 @@ The form posts to [Web3Forms](https://web3forms.com), which emails each submissi
 
 The access key is meant to be public: it can only send email to the address it was created for. Replying to a submission email goes straight to the person who filled out the form.
 
-Spam protection comes from the hidden `botcheck` honeypot field. Each "Get Started" button with a `data-option` attribute pre-selects that training option in the form.
+Spam protection comes from the hidden `botcheck` honeypot field.
 
 ## Deploying
 
