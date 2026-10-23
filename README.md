@@ -6,7 +6,7 @@ Marketing site for Raw Performance Training, a small-group training and 1-on-1 a
 
 A static site with no build step and no dependencies:
 
-- `index.html`: homepage with hero, Start Your Training (how it works and the Get Started form), Monday track sessions, coach, the Hustle & Stride run club, and contact
+- `index.html`: homepage with hero, Start Your Training (how it works and the Get Started form), coach, the Hustle & Stride run club, and contact
 - `join.html`: the old online sign-up page, now a redirect to the Get Started form so old links keep working
 - `styles.css`, `script.js`
 - `images/logo.png`, `favicon.png`, `apple-touch-icon.png`: the RP logo, cropped from the original photo
