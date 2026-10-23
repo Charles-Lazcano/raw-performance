@@ -119,8 +119,7 @@ p { margin: 0; }
 .stat strong { display: block; font-family: var(--display); font-size: 40px; font-weight: 400; line-height: 1; }
 .stat span { color: var(--muted); font-size: 14px; }
 
-/* Program */
-.program-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 36px; }
+/* Pillars */
 .pillar { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; min-height: 130px; transition: border-color .15s; }
 .pillar:hover { border-color: var(--red); }
 .pillar b { display: block; font-family: var(--display); font-weight: 400; color: var(--red); font-size: 40px; line-height: 1; margin-bottom: 14px; }
@@ -137,27 +136,10 @@ p { margin: 0; }
 .plan-card li::before { content: "✓"; color: var(--red); font-weight: 700; margin-right: 10px; }
 .plan-card .btn { margin-top: auto; }
 
-/* Schedule */
-.schedule { margin-top: 32px; display: grid; gap: 10px; }
-.class-row {
-  display: grid; grid-template-columns: 170px 1fr auto; align-items: center; gap: 16px;
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px;
-}
-.class-row .day { font-family: var(--display); font-size: 24px; }
-.class-row .name { color: var(--muted); }
-.class-row.highlight { border-color: var(--red); }
-.class-row.highlight .day { color: var(--red); }
-
 /* Coach */
 .coach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .coach-media { aspect-ratio: 4 / 5; width: 100%; height: auto; object-fit: cover; object-position: 60% 30%; border-radius: var(--radius); border: 1px solid var(--line); }
 .coach-grid p { color: var(--muted); font-size: 18px; }
-
-/* Results */
-.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
-.quote { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--red); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 18px; margin: 0; }
-.quote blockquote { margin: 0; font-style: italic; font-size: 18px; }
-.quote figcaption { font-family: var(--display); letter-spacing: .08em; color: var(--muted); font-size: 16px; margin-top: auto; }
 
 /* Run club */
 .runclub {
@@ -266,8 +248,7 @@ fieldset.field { border: 0; padding: 0; min-width: 0; }
 /* Responsive */
 @media (max-width: 900px) {
   .hero-grid, .coach-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-  .plans, .quotes, .steps { grid-template-columns: 1fr; }
-  .program-grid { grid-template-columns: repeat(2, 1fr); }
+  .plans, .steps { grid-template-columns: 1fr; }
   .runclub { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
   .runclub-video { justify-self: center; max-width: 260px; }
   .hero-media { aspect-ratio: 4 / 5; width: 100%; max-width: 440px; justify-self: center; }
@@ -286,10 +267,6 @@ fieldset.field { border: 0; padding: 0; min-width: 0; }
   .nav a:not(.btn) { padding: 14px 0; border-bottom: 1px solid var(--line); }
   .hero-ctas .btn { width: 100%; }
   .section { padding: 56px 0; }
-  .class-row { grid-template-columns: 1fr auto; gap: 4px 12px; }
-  .class-row .day { grid-column: 1; }
-  .class-row .name { grid-column: 1; grid-row: 2; }
-  .class-row .btn { grid-column: 2; grid-row: 1 / span 2; }
   .stat strong { font-size: 32px; }
   .intake { padding: 32px 18px 26px; }
   .segmented { max-width: none; }

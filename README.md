@@ -2,11 +2,11 @@
 
 **Live site: https://charles-lazcano.github.io/raw-performance/**
 
-Marketing site for Raw Performance Training, a small-group training and 1-on-1 athletic coaching gym in San Antonio, TX, coached by Sean Garner. Built from the "Raw Performance Training – Site Mockup" PDF.
+Marketing site for Raw Performance Training, a small-group training and 1-on-1 athletic coaching gym in Helotes, TX, coached by Sean Garner. Built from the "Raw Performance Training – Site Mockup" PDF.
 
 A static site with no build step and no dependencies:
 
-- `index.html`: homepage with hero, program pillars, Start Your Training (how it works, training options, and the Get Started form), class schedule, coach, results, the Hustle & Stride run club, and contact
+- `index.html`: homepage with hero, Start Your Training (how it works, training options, and the Get Started form), Monday track sessions, coach, the Hustle & Stride run club, and contact
 - `join.html`: the old online sign-up page, now a redirect to the Get Started form so old links keep working
 - `styles.css`, `script.js`
 - `images/logo.png`, `favicon.png`, `apple-touch-icon.png`: the RP logo, cropped from the original photo
@@ -15,8 +15,6 @@ A static site with no build step and no dependencies:
 
 The mockup left these blank, so the site still has them:
 
-- **Class times**: the `[TIME]` entries in `#schedule`
-- **Phone and email**: in `#contact`. The address (10665 Shaenfield Rd, Unit 111) and Google Map are already filled in.
 - **Photos**: the hero crossfades between `images/hero-1.jpg` and `images/hero-2.jpg`, the coach photo is `images/coach-sean.jpg`, and the run club video is `images/run-club.mp4` (with `images/run-club-poster.jpg` as its still frame). Save over any of these files to change them.
 - **Form access key**: `WEB3FORMS_ACCESS_KEY` in `script.js` (see below)
 
