@@ -6,7 +6,7 @@ Marketing site for Raw Performance Training, a small-group training and athletic
 
 A static site with no build step and no dependencies:
 
-- `index.html`: homepage with hero, Start Your Training (how it works and the Get Started form), coach, the Hustle & Stride run club, and contact
+- `index.html`: homepage with hero, Start Your Training (how it works and the Get Started form), coach, Monday track sessions, and contact
 - `join.html`: the old online sign-up page, now a redirect to the Get Started form so old links keep working
 - `styles.css`, `script.js`
 - `images/logo.png`, `favicon.png`, `apple-touch-icon.png`: the RP logo, cropped from the original photo
@@ -15,7 +15,7 @@ A static site with no build step and no dependencies:
 
 The mockup left these blank, so the site still has them:
 
-- **Photos**: the hero crossfades between `images/hero-1.jpg` and `images/hero-2.jpg`, the coach photo is `images/coach-sean.jpg`, and the run club video is `images/run-club.mp4` (with `images/run-club-poster.jpg` as its still frame). Save over any of these files to change them.
+- **Photos**: the hero crossfades between `images/hero-1.jpg` and `images/hero-2.jpg`, the coach photo is `images/coach-sean.jpg`, and the track sessions video is `images/run-club.mp4` (with `images/run-club-poster.jpg` as its still frame). Save over any of these files to change them.
 - **Form access key**: `WEB3FORMS_ACCESS_KEY` in `script.js` (see below)
 
 ## Get Started form
