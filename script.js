@@ -27,6 +27,14 @@ if (runVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   runVideo.pause();
 }
 
+// Directions links open Google Maps by default; on iPhone, iPad and Mac switch them to Apple Maps
+const isApple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+if (isApple) {
+  document.querySelectorAll("a[data-directions]").forEach((a) => {
+    a.href = "https://maps.apple.com/?daddr=13331+Western+Oak+Dr,+Helotes,+TX+78023";
+  });
+}
+
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
