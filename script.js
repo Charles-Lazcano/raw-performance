@@ -84,7 +84,7 @@ if (intake) {
       if (!res.ok || json.success === false) throw new Error(`Web3Forms responded ${res.status}: ${json.message || ""}`);
       const firstName = payload.name.trim().split(/\s+/)[0];
       document.getElementById("intakeThanks").textContent =
-        `Thanks, ${firstName}! Sean will reach out within 24–48 hours to set up your first session.`;
+        `Thanks, ${firstName}! Sean will reach out within 24 to 48 hours to set up your first session.`;
       intake.hidden = true;
       done.hidden = false;
       done.focus();
