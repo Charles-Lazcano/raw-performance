@@ -160,7 +160,11 @@ address .contact-link { align-items: flex-start; }
 address .contact-icon { margin-top: 2px; }
 .contact-icon { flex: none; width: 22px; height: 22px; fill: none; stroke: var(--red); color: var(--red); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .contact-link:hover .contact-icon { stroke: var(--text); color: var(--text); }
+.map-wrap { position: relative; display: flex; }
 .map { width: 100%; min-height: 280px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.map-link { position: absolute; inset: 0; border-radius: var(--radius); display: flex; align-items: flex-end; justify-content: flex-end; padding: 14px; text-decoration: none; }
+.map-link span { background: var(--red); color: #fff; font-family: var(--display); letter-spacing: .08em; font-size: 16px; padding: 8px 14px; border-radius: 6px; box-shadow: 0 6px 18px rgba(0, 0, 0, .4); }
+.map-link:hover span { background: #000; }
 .site-footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: 14px; }
 
 /* Get Started intake form */
