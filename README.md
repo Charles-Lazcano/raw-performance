@@ -2,7 +2,7 @@
 
 **Live site: https://charles-lazcano.github.io/raw-performance/**
 
-Marketing site for Raw Performance Training, a small-group training and 1-on-1 athletic coaching gym in Helotes, TX, coached by Sean Garner. Built from the "Raw Performance Training – Site Mockup" PDF.
+Marketing site for Raw Performance Training, a small-group training and athletic coaching gym in Helotes, TX, coached by Sean Garner. Built from the "Raw Performance Training – Site Mockup" PDF.
 
 A static site with no build step and no dependencies:
 
